@@ -1,11 +1,10 @@
+-- Rayfield
 local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
 
-local success, err = pcall(function()
-    loadstring(game:HttpGet(
-        "https://raw.githubusercontent.com/abdullhx/A7xDev-Farm-Free/main/ui/window.lua"
-    ))(Rayfield)
-end)
+-- تحميل ملف الواجهة
+local uiCode = game:HttpGet(
+    "https://raw.githubusercontent.com/abdullhx/A7xDev-Farm-Free/main/ui/window.lua"
+)
 
-if not success then
-    warn("UI Load Failed:", err)
-end
+local uiFunc = loadstring(uiCode)
+uiFunc(Rayfield)
