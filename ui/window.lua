@@ -18,7 +18,7 @@ return function(Rayfield)
     -- عرض الأموال
     local MoneyLabel = Page1:CreateLabel("Your Money = Loading...")
 
-    -- تحديث تلقائي للأموال
+    -- تحديث مستمر للأموال
     RunService.RenderStepped:Connect(function()
         local money = "N/A"
         local ok, val = pcall(function()
